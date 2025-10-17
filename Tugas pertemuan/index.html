@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahasiswa Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mahasiswa Task Manager 🎓</h1>
+    </header>
+
+    <main>
+        <section id="task-form-section">
+            <h2>Tambah Tugas Baru</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-name">Nama Tugas:</label>
+                    <input type="text" id="task-name" required>
+                    <small id="error-name" class="error-message"></small>
+                </div>
+                <div class="form-group">
+                    <label for="task-course">Mata Kuliah:</label>
+                    <input type="text" id="task-course" required>
+                    <small id="error-course" class="error-message"></small>
+                </div>
+                <div class="form-group">
+                    <label for="task-deadline">Deadline:</label>
+                    <input type="date" id="task-deadline" required>
+                    <small id="error-deadline" class="error-message"></small>
+                </div>
+                <button type="submit">Tambah Tugas</button>
+            </form>
+        </section>
+
+        <section id="task-list-section">
+            <div class="controls">
+                <div class="filter-group">
+                    <label for="filter-status">Filter Status:</label>
+                    <select id="filter-status">
+                        <option value="all">Semua</option>
+                        <option value="pending">Belum Selesai</option>
+                        <option value="completed">Selesai</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="search-course">Cari MK:</label>
+                    <input type="text" id="search-course" placeholder="Nama Mata Kuliah...">
+                </div>
+            </div>
+
+            <div class="stats">
+                Jumlah Tugas Belum Selesai: <span id="pending-count">0</span>
+            </div>
+            
+            <h2>Daftar Tugas</h2>
+            <ul id="task-list">
+                </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mahasiswa Task Manager</p>
+        <p class="author-info">Dibuat oleh Muhammad Fadhel - 123140106</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
